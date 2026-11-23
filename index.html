@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>재활·인체공학 특허 브리핑</title>
+<meta name="description" content="재활·인체공학 분야 공개 특허의 검수 완료 분석 요약">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#17202c;--muted:#5b6675;--line:#dfe3e8;--accent:#1f4e8c}
+@media (prefers-color-scheme:dark){:root{--bg:#10141a;--card:#191f27;--ink:#e8ecf1;--muted:#a3adba;--line:#2c3440;--accent:#8db8ee}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.65}
+.wrap{max-width:880px;margin:0 auto;padding:40px 16px 56px}
+h1{font-size:28px;line-height:1.3;margin:0 0 6px}
+.lead{color:var(--muted);margin:0 0 24px}
+select{width:100%;max-width:280px;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit;margin-bottom:18px}
+article{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;margin-bottom:14px}
+h2{font-size:18px;line-height:1.45;margin:4px 0 8px;overflow-wrap:anywhere}
+.tag{font-size:13px;font-weight:700;color:var(--accent)}
+.meta{font-size:14px;color:var(--muted);margin:0 0 10px;overflow-wrap:anywhere}
+p{margin:0 0 10px}
+a{color:var(--accent);font-weight:700}
+.empty{padding:32px 20px;text-align:center;color:var(--muted)}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:28px;padding-top:14px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>재활·인체공학 특허 브리핑</h1>
+  <p class="lead">공개 특허 공보를 원문과 대조해 검수한 분석 요약</p>
+  <select id="stream" aria-label="분야 선택"><option value="">전체 분야</option></select>
+  <div id="list"><div class="empty">불러오는 중</div></div>
+  <footer>교육·연구용 요약. 권리 범위와 법적 상태는 각 특허청 공보로 확인. 법률 자문 아님.</footer>
+</main>
+<script>
+const names={MOBILITY:'보행·이동 보조',REHAB:'물리치료·재활',ERGONOMICS:'인체공학',KINETICS:'운동기구',ADL_ASSIST:'일상생활 보조',BATH_ERGO:'욕실·위생'};
+const list=document.getElementById('list'), select=document.getElementById('stream');
+let rows=[];
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n}
+function render(){
+  const shown=rows.filter(r=>!select.value||r.stream===select.value);
+  list.replaceChildren();
+  if(!shown.length){list.append(el('div','empty','검수를 통과한 분석이 아직 없습니다.'));return}
+  shown.forEach(r=>{
+    const a=el('article');
+    a.append(el('div','tag',names[r.stream]||r.stream),el('h2','',r.title));
+    a.append(el('p','meta',[r.patent,r.applicant,'공개·등록 '+r.published,'상태 '+r.status,'패밀리 '+(r.family||[]).join(', '),'검수 '+r.reviewed].filter(Boolean).join(' · ')));
+    a.append(el('p','',r.summary));
+    if(/^https:\/\/patents\.google\.com\//.test(r.url)){const l=el('a','','특허 원문 보기');l.href=r.url;l.target='_blank';l.rel='noopener';a.append(l)}
+    list.append(a);
+  });
+}
+fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+  rows=d;
+  [...new Set(d.map(r=>r.stream))].forEach(s=>{const o=el('option','',names[s]||s);o.value=s;select.append(o)});
+  select.onchange=render;render();
+}).catch(()=>{list.replaceChildren(el('div','empty','목록을 불러오지 못했습니다.'))});
+</script>
+</body>
+</html>

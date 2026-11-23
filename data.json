@@ -1,0 +1,62 @@
+[
+  {
+    "id": "2026-11-24-adl_assist",
+    "stream": "ADL_ASSIST",
+    "patent": "KR102972846B1",
+    "title": "환자 이동 보조장치",
+    "applicant": "서정현",
+    "published": "2026-06-02",
+    "status": "Active",
+    "family": [
+      "KR"
+    ],
+    "url": "https://patents.google.com/patent/KR102972846B1/ko",
+    "summary": "침상과 휠체어 사이에서 사람을 옮기는 바퀴형 이동 보조장치입니다. 첫 독립항은 수평 길이를 조절하는 상부 프레임, 그 끝에서 내려오는 결합 파이프, 전동모터의 회전축에 감기거나 풀리는 견인천, 견인천 끝에 탈부착되는 안착천으로 이루어진 견인부를 포함합니다.",
+    "reviewed": "2026-11-24"
+  },
+  {
+    "id": "2026-11-24-kinetics",
+    "stream": "KINETICS",
+    "patent": "KR102969510B1",
+    "title": "웨이트 트레이닝 기구의 충격흡수 부재의 체결구조",
+    "applicant": "장영순",
+    "published": "2026-05-26",
+    "status": "Active",
+    "family": [
+      "KR"
+    ],
+    "url": "https://patents.google.com/patent/KR102969510B1/ko",
+    "summary": "웨이트 트레이닝 기구의 가이드봉 하부 케이스 안에 충격흡수부를 나선 체결한 구조입니다. 첫 독립항은 하강 시 로드 끝의 제1 완충제가 바디프레임 하부의 제2 완충부에 닿아 충격을 이중으로 줄이고, 케이스 상부 홀을 통해 단수조절레버로 감쇠력을 조절하는 구성을 담고 있습니다.",
+    "reviewed": "2026-11-24"
+  },
+  {
+    "id": "2026-11-24-rehab",
+    "stream": "REHAB",
+    "patent": "KR103005173B1",
+    "title": "보행 보조 및 보행 훈련이 가능한 휴대용 보조동력장치",
+    "applicant": "근로복지공단",
+    "published": "2026-08-14",
+    "status": "Active",
+    "family": [
+      "KR"
+    ],
+    "url": "https://patents.google.com/patent/KR103005173B1/ko",
+    "summary": "허리밴드 앞쪽에 모터와 스트링풀리를 둔 휴대용 보행 보조 동력장치입니다. 첫 독립항은 풀리에 고정된 제1·제2 탄성스트링이 감기며 길이가 짧아지고, 각 스트링 끝이 사용자의 보조기에 연결되어 구동 보조력을 전달하는 구성을 담고 있습니다. 하나의 모터로 두 스트링을 함께 조절하는 점이 특징입니다.",
+    "reviewed": "2026-11-24"
+  },
+  {
+    "id": "2026-11-24-mobility",
+    "stream": "MOBILITY",
+    "patent": "KR102988755B1",
+    "title": "스마트 노인용 보행 보조장치",
+    "applicant": "장상원",
+    "published": "2026-07-08",
+    "status": "Active",
+    "family": [
+      "KR"
+    ],
+    "url": "https://patents.google.com/patent/KR102988755B1/ko",
+    "summary": "보행 보조장치 바퀴의 자석 회전을 리드센서로 감지해 RF로 전송하고, 제어부가 회전수를 이동거리로 환산해 표시하는 구조입니다. 첫 독립항은 제어부와 리드센서에 각각 고유 ID를 부여해 근거리 신호 혼선을 줄이는 점을 특징으로 합니다. 고령자의 보행량을 보행기 자체에서 기록하려는 접근입니다.",
+    "reviewed": "2026-11-24"
+  }
+]
