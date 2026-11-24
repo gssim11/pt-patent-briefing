@@ -139,7 +139,7 @@ footer p{margin:0;max-width:78ch}
   </div>
   <div id="list" tabindex="-1" aria-live="polite"><div class="skeleton"></div><div class="skeleton"></div></div>
 </main>
-<footer class="wrap"><p>교육·연구용 요약입니다. 선행문헌 대조는 검색 범위 안의 문헌을 원문 문장으로 확인한 1차 결과이며 특허성이나 권리 범위 판단이 아닙니다. 권리와 법적 상태는 특허청 공보에서 확인하세요.</p></footer>
+<footer class="wrap"><p>교육·연구용 요약입니다. 선행문헌 대조는 검색 범위 안의 상위 문헌에서 근거 문장을 확인한 1차 결과로, 문헌 전문 검토가 아니며 특허성이나 권리 범위 판단이 아닙니다. 권리와 법적 상태는 특허청 공보에서 확인하세요.</p></footer>
 <script>
 const NAMES={MOBILITY:'보행·이동',REHAB:'물리치료·재활',ERGONOMICS:'인체공학',KINETICS:'운동기구',ADL_ASSIST:'일상생활 보조',BATH_ERGO:'욕실·위생'};
 const STATUS={Active:'권리 유지',Pending:'심사 중'};
@@ -171,7 +171,7 @@ function flow(r){
   });return ol;
 }
 function matrix(r){
-  const w=el('div','matrix-wrap'),t=el('table'),cap=el('caption','',`자동 후보 중 상위 ${r.prior_docs.length}건을 원문으로 확인`),head=el('thead'),hr=el('tr'),body=el('tbody');
+  const w=el('div','matrix-wrap'),t=el('table'),cap=el('caption','',`자동 후보 상위 ${r.prior_docs.length}건의 근거 문장 확인`),head=el('thead'),hr=el('tr'),body=el('tbody');
   const h0=el('th','','문헌');h0.scope='col';hr.append(h0);
   r.elements.forEach(e=>{const th=el('th','',e.key);th.scope='col';th.title=e.label;hr.append(th)});head.append(hr);
   r.prior_docs.forEach(d=>{
@@ -182,7 +182,7 @@ function matrix(r){
   const missing=r.elements.filter(e=>(r.found[e.key]??0)===0);
   t.append(cap,head,body);w.append(t);
   const frag=document.createDocumentFragment();frag.append(w);
-  if(missing.length){const p=el('p','note');p.append(el('b','','확인 문헌에 없는 구성 '),document.createTextNode(missing.map(e=>e.key+' '+e.label).join(', ')));frag.append(p)}
+  if(missing.length){const p=el('p','note');p.append(el('b','','확인한 문장에 없는 구성 '),document.createTextNode(missing.map(e=>e.key+' '+e.label).join(', ')));frag.append(p)}
   return frag;
 }
 function timeline(r){
@@ -220,7 +220,7 @@ function render(){
 }
 function stats(){
   const checked=rows.reduce((a,r)=>a+r.prior_docs.length,0),last=rows.map(r=>r.reviewed).sort().pop()||'-';
-  $('stats').replaceChildren(...[[rows.length,'건 특허'],[checked,'건 선행문헌 원문 확인'],[last,'검수']].map(([n,t])=>{const li=el('li');li.append(el('b','',n),document.createTextNode(t));return li}));
+  $('stats').replaceChildren(...[[rows.length,'건 특허'],[checked,'건 선행문헌 문장 확인'],[last,'검수']].map(([n,t])=>{const li=el('li');li.append(el('b','',n),document.createTextNode(t));return li}));
 }
 function load(){
   list.replaceChildren(el('div','skeleton'),el('div','skeleton'));
