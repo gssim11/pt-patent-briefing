@@ -4,57 +4,232 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>재활·인체공학 특허 브리핑</title>
-<meta name="description" content="재활·인체공학 분야 공개 특허의 검수 완료 분석 요약">
+<meta name="description" content="재활·인체공학 특허의 핵심 구성과 선행문헌 대조를 한눈에 보는 검수 브리핑">
+<meta property="og:title" content="재활·인체공학 특허 브리핑">
+<meta property="og:description" content="특허 구성 흐름과 선행문헌 대조를 한 화면에">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f5f6f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151a18" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d6652'/%3E%3Cpath d='M8 22h4v-6h4v6h8M12 10h8' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#17202c;--muted:#5b6675;--line:#dfe3e8;--accent:#1f4e8c}
-@media (prefers-color-scheme:dark){:root{--bg:#10141a;--card:#191f27;--ink:#e8ecf1;--muted:#a3adba;--line:#2c3440;--accent:#8db8ee}}
+:root{--bg:#f5f6f3;--panel:#fff;--soft:#edf0ec;--ink:#18211e;--body:#35403c;--muted:#5d6964;--line:#d9dfda;--accent:#1d6652;--accent-soft:#d9ebe4;--half:#8fbcab;--shadow:0 1px 2px rgb(24 45 38/.06),0 8px 24px rgb(24 45 38/.05)}
+@media (prefers-color-scheme:dark){:root{--bg:#151a18;--panel:#1e2522;--soft:#29312e;--ink:#edf1ee;--body:#cdd6d1;--muted:#a2ada8;--line:#343d39;--accent:#6fcdb0;--accent-soft:#234139;--half:#4d8b77;--shadow:none}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.65}
-.wrap{max-width:880px;margin:0 auto;padding:40px 16px 56px}
-h1{font-size:28px;line-height:1.3;margin:0 0 6px}
-.lead{color:var(--muted);margin:0 0 24px}
-select{width:100%;max-width:280px;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit;margin-bottom:18px}
-article{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;margin-bottom:14px}
-h2{font-size:18px;line-height:1.45;margin:4px 0 8px;overflow-wrap:anywhere}
-.tag{font-size:13px;font-weight:700;color:var(--accent)}
-.meta{font-size:14px;color:var(--muted);margin:0 0 10px;overflow-wrap:anywhere}
-p{margin:0 0 10px}
-a{color:var(--accent);font-weight:700}
-.empty{padding:32px 20px;text-align:center;color:var(--muted)}
-footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:28px;padding-top:14px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);font-family:"Pretendard Variable",Pretendard,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:16px;line-height:1.65;word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:16px;top:-48px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:2}
+.skip:focus{top:8px}
+.wrap{width:min(1160px,100%);margin:0 auto;padding:0 16px}
+header{padding:44px 0 22px}
+h1{margin:0;color:var(--ink);font-size:clamp(28px,4vw,40px);line-height:1.2;letter-spacing:-.025em;font-weight:750;text-wrap:balance}
+.lead{margin:8px 0 0;font-size:17px;color:var(--muted);max-width:62ch}
+.stats{display:flex;flex-wrap:wrap;gap:8px 32px;margin:22px 0 0;padding:0;list-style:none}
+.stats li{display:flex;align-items:baseline;gap:6px;color:var(--muted);font-size:15px}
+.stats b{color:var(--ink);font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.tools{position:sticky;top:0;z-index:1;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(6px);border-block:1px solid var(--line);padding:10px 0}
+.tools .wrap{display:flex;gap:10px 16px;align-items:center;flex-wrap:wrap}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1 1 420px;padding:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 14px;border:1px solid var(--line);background:var(--panel);color:var(--body);border-radius:7px;font:inherit;font-size:15px;font-weight:550;cursor:pointer;transition:background .18s,color .18s,border-color .18s,transform .12s}
+.chip:hover{border-color:var(--accent)}
+.chip:active{transform:translateY(1px)}
+.chip[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+.chip span{font-variant-numeric:tabular-nums;opacity:.8;margin-left:4px}
+.search{flex:0 1 260px;min-width:180px}
+.search input{width:100%;height:40px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--ink);font:inherit;font-size:16px;padding:0 12px}
+.search input::placeholder{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin:20px 0 14px;font-size:14px;color:var(--muted)}
+.legend b{color:var(--ink);font-weight:650}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.mark{flex:none;display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid var(--accent);background:transparent}
+.mark.g2{background:var(--accent)}
+.mark.g1{background:linear-gradient(90deg,var(--accent) 50%,transparent 50%)}
+.mark.g0{border-color:var(--muted);opacity:.65}
+main{padding-bottom:40px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);margin-bottom:18px;overflow:hidden}
+.head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;padding:22px 24px 18px;border-bottom:1px solid var(--line)}
+.field{font-size:14px;font-weight:700;color:var(--accent)}
+h2{margin:2px 0 6px;color:var(--ink);font-size:clamp(20px,2.3vw,24px);line-height:1.35;letter-spacing:-.015em;font-weight:700;text-wrap:balance}
+.facts{display:flex;flex-wrap:wrap;gap:2px 14px;margin:0;font-size:14px;color:var(--muted)}
+.facts b{font-weight:600;color:var(--body);font-variant-numeric:tabular-nums}
+.gauge{display:flex;align-items:center;gap:10px;text-align:left}
+.gauge svg{width:68px;height:68px;transform:rotate(-90deg)}
+.gauge circle{fill:none;stroke-width:7}
+.gauge .track{stroke:var(--soft)}.gauge .full{stroke:var(--accent)}.gauge .part{stroke:var(--half)}
+.gauge-num{position:relative;width:68px;height:68px;flex:none}
+.gauge-num strong{position:absolute;inset:0;display:grid;place-items:center;color:var(--ink);font-size:17px;font-weight:750;font-variant-numeric:tabular-nums}
+.gauge p{margin:0;font-size:13.5px;line-height:1.5;color:var(--muted);white-space:nowrap}
+.gauge p b{display:block;color:var(--ink);font-size:14px;font-weight:700}
+.gauge p i{display:inline-block;font-style:normal;margin-right:8px}
+.gauge p i b{display:inline;color:inherit;font-variant-numeric:tabular-nums}
+.body{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr)}
+.col{padding:18px 24px 22px;min-width:0}
+.col+.col{border-left:1px solid var(--line);background:color-mix(in srgb,var(--soft) 35%,var(--panel))}
+.note{margin:12px 0 0;font-size:14.5px}.note b{color:var(--ink);font-weight:650;margin-right:4px}
+h3{margin:0 0 10px;color:var(--ink);font-size:16px;font-weight:700}
+.summary{margin:0 0 16px;max-width:60ch;text-wrap:pretty}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.step{display:grid;grid-template-columns:26px minmax(0,1fr) 14px;gap:8px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:7px;background:var(--panel)}
+.key{display:grid;place-items:center;width:26px;height:26px;border-radius:5px;background:var(--accent-soft);color:var(--accent);font-size:14px;font-weight:750}
+.step b{display:block;color:var(--ink);font-size:14.5px;font-weight:650;line-height:1.3}
+.step small{display:block;color:var(--muted);font-size:13px;line-height:1.35}
+.matrix-wrap{overflow-x:auto;margin:0 -4px;padding:0 4px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+caption{text-align:left;color:var(--muted);font-size:13px;padding-bottom:6px}
+th,td{padding:7px 2px;border-bottom:1px solid var(--line);text-align:center}
+thead th{color:var(--ink);font-weight:700;font-size:13px}
+th[scope=row],thead th:first-child{text-align:left;font-weight:500;padding-right:8px;min-width:112px;max-width:190px}
+th[scope=row] a{font-weight:650;font-variant-numeric:tabular-nums;text-underline-offset:2px}
+th[scope=row] small{display:block;color:var(--muted);font-size:12.5px;line-height:1.3}
+tr.gap td,tr.gap th{border-bottom:0;font-weight:650;color:var(--ink)}
+.time{position:relative;height:42px;margin:18px 6px 2px}
+.time i{position:absolute;left:0;right:0;top:7px;height:2px;background:var(--line)}
+.time span{position:absolute;top:2px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--half);border:2px solid var(--panel)}
+.time span.me{background:var(--accent)}
+.time em{position:absolute;top:21px;font-style:normal;font-size:12.5px;color:var(--muted);white-space:nowrap}
+.time em.r{right:0}.time em.l{left:0}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding:12px 24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.foot a{font-weight:650;text-underline-offset:3px;min-height:24px}
+.empty{padding:44px 20px;text-align:center;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.empty button{margin-top:10px}
+.skeleton{height:280px;border-radius:12px;margin-bottom:18px;background:var(--soft);animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.55}}
+footer{border-top:1px solid var(--line);padding:18px 0 30px;font-size:14px;color:var(--muted)}
+footer p{margin:0;max-width:78ch}
+@media (max-width:860px){
+  .body{grid-template-columns:minmax(0,1fr)}
+  .col+.col{border-left:0;border-top:1px solid var(--line)}
+}
+@media (max-width:520px){
+  header{padding-top:30px}
+  .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px}
+  .stats b{font-size:21px}
+  .tools{position:static}
+  .chips{flex:1 1 100%;flex-wrap:wrap;overflow:visible}
+  .chip{padding:0 11px;font-size:14.5px}
+  .head{padding:18px 16px 14px;grid-template-columns:minmax(0,1fr)}
+  .col{padding:16px}.foot{padding:12px 16px}
+  .flow{gap:6px}
+  .step{grid-template-columns:22px minmax(0,1fr) 14px;gap:6px;padding:7px 8px}
+  .key{width:22px;height:22px;font-size:13px}
+  .step b{font-size:13.5px}.step small{display:none}
+  .search{flex:1 1 100%}
+  th[scope=row],thead th:first-child{min-width:104px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<main class="wrap">
+<a class="skip" href="#list">본문으로 이동</a>
+<header class="wrap">
   <h1>재활·인체공학 특허 브리핑</h1>
-  <p class="lead">공개 특허 공보를 원문과 대조해 검수한 분석 요약</p>
-  <select id="stream" aria-label="분야 선택"><option value="">전체 분야</option></select>
-  <div id="list"><div class="empty">불러오는 중</div></div>
-  <footer>교육·연구용 요약. 권리 범위와 법적 상태는 각 특허청 공보로 확인. 법률 자문 아님.</footer>
+  <p class="lead">특허의 핵심 구성과 앞선 문헌에 같은 구성이 있는지 한눈에 봅니다.</p>
+  <ul class="stats" id="stats" aria-label="현황"></ul>
+</header>
+<div class="tools"><div class="wrap">
+  <div class="chips" id="chips" role="group" aria-label="분야 선택"></div>
+  <label class="search"><input id="q" type="search" placeholder="특허명·번호·출원인 검색" aria-label="특허명, 번호, 출원인 검색"></label>
+</div></div>
+<main class="wrap" id="main">
+  <div class="legend" aria-label="기호 설명"><b>선행문헌 대조</b>
+    <span><i class="mark g2"></i>같은 구성 확인</span><span><i class="mark g1"></i>일부 유사</span><span><i class="mark g0"></i>찾지 못함</span>
+  </div>
+  <div id="list" tabindex="-1" aria-live="polite"><div class="skeleton"></div><div class="skeleton"></div></div>
 </main>
+<footer class="wrap"><p>교육·연구용 요약입니다. 선행문헌 대조는 검색 범위 안의 문헌을 원문 문장으로 확인한 1차 결과이며 특허성이나 권리 범위 판단이 아닙니다. 권리와 법적 상태는 특허청 공보에서 확인하세요.</p></footer>
 <script>
-const names={MOBILITY:'보행·이동 보조',REHAB:'물리치료·재활',ERGONOMICS:'인체공학',KINETICS:'운동기구',ADL_ASSIST:'일상생활 보조',BATH_ERGO:'욕실·위생'};
-const list=document.getElementById('list'), select=document.getElementById('stream');
-let rows=[];
-function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n}
-function render(){
-  const shown=rows.filter(r=>!select.value||r.stream===select.value);
-  list.replaceChildren();
-  if(!shown.length){list.append(el('div','empty','검수를 통과한 분석이 아직 없습니다.'));return}
-  shown.forEach(r=>{
-    const a=el('article');
-    a.append(el('div','tag',names[r.stream]||r.stream),el('h2','',r.title));
-    a.append(el('p','meta',[r.patent,r.applicant,'공개·등록 '+r.published,'상태 '+r.status,'패밀리 '+(r.family||[]).join(', '),'검수 '+r.reviewed].filter(Boolean).join(' · ')));
-    a.append(el('p','',r.summary));
-    if(/^https:\/\/patents\.google\.com\//.test(r.url)){const l=el('a','','특허 원문 보기');l.href=r.url;l.target='_blank';l.rel='noopener';a.append(l)}
-    list.append(a);
+const NAMES={MOBILITY:'보행·이동',REHAB:'물리치료·재활',ERGONOMICS:'인체공학',KINETICS:'운동기구',ADL_ASSIST:'일상생활 보조',BATH_ERGO:'욕실·위생'};
+const STATUS={Active:'권리 유지',Pending:'심사 중'};
+const $=id=>document.getElementById(id), list=$('list');
+const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n};
+const svg=(tag,attrs)=>{const n=document.createElementNS('http://www.w3.org/2000/svg',tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));return n};
+const GRADE=['찾지 못함','일부 유사','같은 구성 확인'];
+let rows=[],field='',query='';
+const mark=g=>{const m=el('i','mark g'+g);m.setAttribute('role','img');m.setAttribute('aria-label',GRADE[g]);m.title=GRADE[g];return m};
+const year=d=>Number(String(d).slice(0,4));
+const safe=u=>/^https:\/\/patents\.google\.com\//.test(u||'')?u:'';
+
+function gauge(r){
+  const total=r.elements.length, vals=Object.values(r.found), full=vals.filter(v=>v===2).length, part=vals.filter(v=>v===1).length;
+  const box=el('div','gauge'), wrap=el('div','gauge-num'), s=svg('svg',{viewBox:'0 0 68 68','aria-hidden':'true'}), R=29, C=2*Math.PI*R;
+  s.append(svg('circle',{class:'track',cx:34,cy:34,r:R}));
+  s.append(svg('circle',{class:'part',cx:34,cy:34,r:R,'stroke-dasharray':`${C*(full+part)/total} ${C}`}));
+  s.append(svg('circle',{class:'full',cx:34,cy:34,r:R,'stroke-dasharray':`${C*full/total} ${C}`}));
+  wrap.append(s,el('strong','',`${full}/${total}`));
+  const note=el('p');note.append(el('b','','앞선 문헌과 겹침'));[['같음',full],['일부',part],['없음',total-full-part]].forEach(([k,v])=>{const x=el('i','',k+' ');x.append(el('b','',v));note.append(x)});
+  wrap.setAttribute('aria-hidden','true');note.setAttribute('aria-label',`구성 ${total}개 중 같은 구성 ${full}개, 일부 유사 ${part}개, 찾지 못함 ${total-full-part}개`);box.append(wrap,note);
+  return box;
+}
+function flow(r){
+  const ol=el('ol','flow');ol.setAttribute('aria-label','청구항 핵심 구성');
+  r.elements.forEach(e=>{
+    const li=el('li','step'),t=el('div');t.append(el('b','',e.label),el('small','',e.role));
+    li.append(el('span','key',e.key),t,mark(r.found[e.key]??0));ol.append(li);
+  });return ol;
+}
+function matrix(r){
+  const w=el('div','matrix-wrap'),t=el('table'),cap=el('caption','',`자동 후보 중 상위 ${r.prior_docs.length}건을 원문으로 확인`),head=el('thead'),hr=el('tr'),body=el('tbody');
+  const h0=el('th','','문헌');h0.scope='col';hr.append(h0);
+  r.elements.forEach(e=>{const th=el('th','',e.key);th.scope='col';th.title=e.label;hr.append(th)});head.append(hr);
+  r.prior_docs.forEach(d=>{
+    const tr=el('tr'),th=el('th');th.scope='row';const a=el('a','',d.pub);a.href=`https://patents.google.com/patent/${encodeURIComponent(d.pub)}/ko`;a.target='_blank';a.rel='noopener';a.title=d.title;
+    th.append(a,el('small','',`${d.date}${d.examiner?' · 심사관 인용':d.cited?' · 출원인 인용':''}`));tr.append(th);
+    r.elements.forEach(e=>{const td=el('td');td.append(mark(d.grades[e.key]??0));tr.append(td)});body.append(tr);
+  });
+  const missing=r.elements.filter(e=>(r.found[e.key]??0)===0);
+  t.append(cap,head,body);w.append(t);
+  const frag=document.createDocumentFragment();frag.append(w);
+  if(missing.length){const p=el('p','note');p.append(el('b','','확인 문헌에 없는 구성 '),document.createTextNode(missing.map(e=>e.key+' '+e.label).join(', ')));frag.append(p)}
+  return frag;
+}
+function timeline(r){
+  const dates=r.prior_docs.map(d=>d.date).filter(Boolean).sort();if(!dates.length)return document.createDocumentFragment();
+  const start=Date.parse(dates[0]),end=Date.parse(r.published||r.priority),span=Math.max(end-start,1),x=d=>Math.min(100,Math.max(0,(Date.parse(d)-start)/span*100));
+  const box=el('div','time');box.setAttribute('role','img');box.setAttribute('aria-label',`가장 이른 대조 문헌 ${dates[0]}, 이 특허 공개·등록 ${r.published}`);box.append(el('i'));
+  dates.forEach(d=>{const s=el('span');s.style.left=x(d)+'%';s.title=d;box.append(s)});
+  const me=el('span','me');me.style.left=x(r.published||r.priority)+'%';box.append(me,el('em','l',`${year(dates[0])} 대조 문헌`),el('em','r',`${year(r.published)} 이 특허`));
+  return box;
+}
+function card(r){
+  const c=el('article','card'),head=el('div','head'),info=el('div'),facts=el('p','facts');
+  [['번호',r.patent],['출원인',r.applicant],['등록',r.published],['상태',STATUS[r.status]||r.status]].forEach(([k,v])=>{if(!v)return;const s=el('span','',k+' ');s.append(el('b','',v));facts.append(s)});
+  info.append(el('div','field',NAMES[r.stream]||r.stream),el('h2','',r.title),facts);head.append(info,gauge(r));
+  const body=el('div','body'),left=el('section','col'),right=el('section','col');
+  left.append(el('h3','','핵심 구성'),el('p','summary',r.summary),flow(r));
+  right.append(el('h3','','선행문헌 대조'),matrix(r),timeline(r));body.append(left,right);
+  const foot=el('div','foot');foot.append(el('span','',`검수 ${r.reviewed}`));
+  if(safe(r.url)){const a=el('a','','특허 원문 보기');a.href=r.url;a.target='_blank';a.rel='noopener';foot.append(a)}
+  c.append(head,body,foot);return c;
+}
+function renderChips(){
+  const box=$('chips');box.replaceChildren();
+  [['','전체',rows.length],...[...new Set(rows.map(r=>r.stream))].map(s=>[s,NAMES[s]||s,rows.filter(r=>r.stream===s).length])].forEach(([v,label,n])=>{
+    const b=el('button','chip',label);b.type='button';b.append(el('span','',n));b.setAttribute('aria-pressed',String(field===v));
+    b.onclick=()=>{field=v;renderChips();render()};box.append(b);
   });
 }
-fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
-  rows=d;
-  [...new Set(d.map(r=>r.stream))].forEach(s=>{const o=el('option','',names[s]||s);o.value=s;select.append(o)});
-  select.onchange=render;render();
-}).catch(()=>{list.replaceChildren(el('div','empty','목록을 불러오지 못했습니다.'))});
+function render(){
+  const q=query.trim().toLowerCase();
+  const shown=rows.filter(r=>(!field||r.stream===field)&&(!q||[r.title,r.patent,r.applicant,r.summary].join(' ').toLowerCase().includes(q)));
+  list.replaceChildren();
+  if(!shown.length){list.append(el('div','empty',rows.length?'조건에 맞는 특허가 없습니다. 분야나 검색어를 바꿔 보세요.':'검수를 통과한 특허가 아직 없습니다.'));return}
+  shown.forEach(r=>list.append(card(r)));
+}
+function stats(){
+  const checked=rows.reduce((a,r)=>a+r.prior_docs.length,0),last=rows.map(r=>r.reviewed).sort().pop()||'-';
+  $('stats').replaceChildren(...[[rows.length,'건 특허'],[checked,'건 선행문헌 원문 확인'],[last,'검수']].map(([n,t])=>{const li=el('li');li.append(el('b','',n),document.createTextNode(t));return li}));
+}
+function load(){
+  list.replaceChildren(el('div','skeleton'),el('div','skeleton'));
+  fetch('data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{rows=d;stats();renderChips();render()}).catch(()=>{
+    const e=el('div','empty','목록을 불러오지 못했습니다.'),b=el('button','chip','다시 시도');b.type='button';b.onclick=load;e.append(el('br'),b);list.replaceChildren(e);
+  });
+}
+$('q').addEventListener('input',e=>{query=e.target.value;render()});
+load();
 </script>
 </body>
 </html>

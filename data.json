@@ -6,6 +6,88 @@
     "title": "환자 이동 보조장치",
     "applicant": "서정현",
     "published": "2026-06-02",
+    "priority": "2026-01-21",
+    "elements": [
+      {
+        "key": "A",
+        "label": "바퀴 하부 프레임",
+        "role": "장치 이동"
+      },
+      {
+        "key": "B",
+        "label": "상부 지지프레임",
+        "role": "하부 프레임 상단 결합"
+      },
+      {
+        "key": "C",
+        "label": "수평 길이 조절",
+        "role": "상부 프레임 연장"
+      },
+      {
+        "key": "D",
+        "label": "하방 결합 파이프",
+        "role": "끝단에서 아래로"
+      },
+      {
+        "key": "E",
+        "label": "전동모터 견인",
+        "role": "회전력 발생"
+      },
+      {
+        "key": "F",
+        "label": "감기는 견인천",
+        "role": "회전축에 권취"
+      },
+      {
+        "key": "G",
+        "label": "탈부착 안착천",
+        "role": "사람을 받치는 천"
+      }
+    ],
+    "cited_total": 14,
+    "found": {
+      "A": 2,
+      "B": 1,
+      "C": 0,
+      "D": 1,
+      "E": 1,
+      "F": 1,
+      "G": 1
+    },
+    "prior_docs": [
+      {
+        "pub": "US9421144B2",
+        "title": "Motorized air walker and suspension system for paralyzed persons",
+        "date": "2016-08-23",
+        "examiner": false,
+        "cited": false,
+        "grades": {
+          "A": 2,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "E": 1,
+          "F": 1,
+          "G": 1
+        }
+      },
+      {
+        "pub": "JPH08336561A",
+        "title": "Nursing lifter",
+        "date": "1996-12-24",
+        "examiner": true,
+        "cited": true,
+        "grades": {
+          "A": 2,
+          "B": 1,
+          "C": 0,
+          "D": 1,
+          "E": 0,
+          "F": 1,
+          "G": 1
+        }
+      }
+    ],
     "status": "Active",
     "family": [
       "KR"
@@ -21,6 +103,88 @@
     "title": "웨이트 트레이닝 기구의 충격흡수 부재의 체결구조",
     "applicant": "장영순",
     "published": "2026-05-26",
+    "priority": "2026-01-14",
+    "elements": [
+      {
+        "key": "A",
+        "label": "가이드봉 하부 케이스",
+        "role": "중량블럭 지지 봉"
+      },
+      {
+        "key": "B",
+        "label": "나선 체결",
+        "role": "케이스 안 충격흡수부"
+      },
+      {
+        "key": "C",
+        "label": "로드 끝 제1 완충",
+        "role": "하강 시 접촉"
+      },
+      {
+        "key": "D",
+        "label": "프레임 제2 완충",
+        "role": "바디프레임 하부 고정"
+      },
+      {
+        "key": "E",
+        "label": "이중 감쇠",
+        "role": "두 완충으로 감쇠"
+      },
+      {
+        "key": "F",
+        "label": "단수조절 레버",
+        "role": "감쇠력 단계 조절"
+      },
+      {
+        "key": "G",
+        "label": "케이스 상부 홀",
+        "role": "레버 조작 통로"
+      }
+    ],
+    "cited_total": 8,
+    "found": {
+      "A": 1,
+      "B": 1,
+      "C": 1,
+      "D": 1,
+      "E": 1,
+      "F": 1,
+      "G": 0
+    },
+    "prior_docs": [
+      {
+        "pub": "KR102765107B1",
+        "title": "Arm strength exercise equipment with shock-relieving function",
+        "date": "2025-02-07",
+        "examiner": true,
+        "cited": true,
+        "grades": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "E": 0,
+          "F": 0,
+          "G": 0
+        }
+      },
+      {
+        "pub": "US8550962B2",
+        "title": "Dual deck exercise device",
+        "date": "2013-10-08",
+        "examiner": false,
+        "cited": false,
+        "grades": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "E": 1,
+          "F": 1,
+          "G": 0
+        }
+      }
+    ],
     "status": "Active",
     "family": [
       "KR"
@@ -36,6 +200,80 @@
     "title": "보행 보조 및 보행 훈련이 가능한 휴대용 보조동력장치",
     "applicant": "근로복지공단",
     "published": "2026-08-14",
+    "priority": "2025-12-08",
+    "elements": [
+      {
+        "key": "A",
+        "label": "허리밴드",
+        "role": "허리 고정·둘레 조절"
+      },
+      {
+        "key": "B",
+        "label": "모터 + 풀리",
+        "role": "전측 구동모듈"
+      },
+      {
+        "key": "C",
+        "label": "탄성스트링",
+        "role": "풀리에서 하방 연장"
+      },
+      {
+        "key": "D",
+        "label": "두 스트링 공통 풀리",
+        "role": "한 풀리에 양측 고정"
+      },
+      {
+        "key": "E",
+        "label": "권취 길이 단축",
+        "role": "감기며 길이 감소"
+      },
+      {
+        "key": "F",
+        "label": "보조기 연결",
+        "role": "보조력을 보행에 전달"
+      }
+    ],
+    "cited_total": 0,
+    "found": {
+      "A": 1,
+      "B": 2,
+      "C": 1,
+      "D": 1,
+      "E": 1,
+      "F": 1
+    },
+    "prior_docs": [
+      {
+        "pub": "US12070406B2",
+        "title": "Patch systems for use with assistive exosuit",
+        "date": "2024-08-27",
+        "examiner": false,
+        "cited": false,
+        "grades": {
+          "A": 1,
+          "B": 2,
+          "C": 1,
+          "D": 1,
+          "E": 1,
+          "F": 1
+        }
+      },
+      {
+        "pub": "US20220401245A1",
+        "title": "Unloading Knee-Ankle-Foot Orthotic Apparatus with Conforming and Distracting Hinge",
+        "date": "2022-12-22",
+        "examiner": false,
+        "cited": false,
+        "grades": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "E": 1,
+          "F": 1
+        }
+      }
+    ],
     "status": "Active",
     "family": [
       "KR"
@@ -51,6 +289,96 @@
     "title": "스마트 노인용 보행 보조장치",
     "applicant": "장상원",
     "published": "2026-07-08",
+    "priority": "2026-01-02",
+    "elements": [
+      {
+        "key": "A",
+        "label": "바퀴 자석",
+        "role": "바퀴와 함께 회전"
+      },
+      {
+        "key": "B",
+        "label": "브라켓 케이스",
+        "role": "바퀴 지지부에 조립"
+      },
+      {
+        "key": "C",
+        "label": "자기장 센서",
+        "role": "자석 회전 감지"
+      },
+      {
+        "key": "D",
+        "label": "RF 송신",
+        "role": "감지 신호 무선 송출"
+      },
+      {
+        "key": "E",
+        "label": "RF 수신",
+        "role": "무선 신호 수신"
+      },
+      {
+        "key": "F",
+        "label": "거리 환산 MCU",
+        "role": "회전수를 이동거리로"
+      },
+      {
+        "key": "G",
+        "label": "거리 표시",
+        "role": "디스플레이 출력"
+      },
+      {
+        "key": "H",
+        "label": "고유 ID",
+        "role": "근거리 혼선 감소"
+      }
+    ],
+    "cited_total": 0,
+    "found": {
+      "A": 1,
+      "B": 0,
+      "C": 2,
+      "D": 1,
+      "E": 1,
+      "F": 2,
+      "G": 2,
+      "H": 0
+    },
+    "prior_docs": [
+      {
+        "pub": "US12336955B2",
+        "title": "Mobility assistance apparatus",
+        "date": "2025-06-24",
+        "examiner": false,
+        "cited": false,
+        "grades": {
+          "A": 1,
+          "B": 0,
+          "C": 2,
+          "D": 1,
+          "E": 0,
+          "F": 2,
+          "G": 2,
+          "H": 0
+        }
+      },
+      {
+        "pub": "EP3777677B1",
+        "title": "Soft exosuit for assistance with human motion",
+        "date": "2024-11-06",
+        "examiner": false,
+        "cited": false,
+        "grades": {
+          "A": 0,
+          "B": 0,
+          "C": 1,
+          "D": 1,
+          "E": 1,
+          "F": 0,
+          "G": 0,
+          "H": 0
+        }
+      }
+    ],
     "status": "Active",
     "family": [
       "KR"
