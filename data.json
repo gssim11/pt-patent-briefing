@@ -1,5 +1,102 @@
 [
   {
+    "id": "2026-11-26-ergonomics",
+    "stream": "ERGONOMICS",
+    "patent": "KR102986921B1",
+    "title": "스윙 기능을 갖는 의자",
+    "applicant": "주식회사 센베라",
+    "published": "2026-07-08",
+    "priority": "2026-01-23",
+    "elements": [
+      {
+        "key": "A",
+        "label": "바닥 고정 프레임",
+        "role": "전체 지지"
+      },
+      {
+        "key": "B",
+        "label": "전자기 직선 구동 모듈",
+        "role": "가동봉 왕복"
+      },
+      {
+        "key": "C",
+        "label": "좌우 스윙 기초 프레임",
+        "role": "링크 지지"
+      },
+      {
+        "key": "D",
+        "label": "전후방 링크 리클라이너",
+        "role": "힌지 회동"
+      },
+      {
+        "key": "E",
+        "label": "구동빔·가동 링크",
+        "role": "가동봉과 링크 연결"
+      },
+      {
+        "key": "F",
+        "label": "직선→스윙 변환",
+        "role": "요람 운동"
+      },
+      {
+        "key": "G",
+        "label": "제어부",
+        "role": "구동 제어"
+      }
+    ],
+    "cited_total": 5,
+    "found": {
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1,
+      "E": 0,
+      "F": 0,
+      "G": 1
+    },
+    "prior_docs": [
+      {
+        "pub": "US8550962B2",
+        "title": "Dual deck exercise device",
+        "date": "2013-10-08",
+        "examiner": false,
+        "cited": false,
+        "grades": {
+          "A": 1,
+          "B": 0,
+          "C": 0,
+          "D": 1,
+          "E": 0,
+          "F": 0,
+          "G": 1
+        }
+      },
+      {
+        "pub": "AU2021201817B2",
+        "title": "Modular top drive system",
+        "date": "2022-11-24",
+        "examiner": false,
+        "cited": false,
+        "grades": {
+          "A": 0,
+          "B": 0,
+          "C": 0,
+          "D": 0,
+          "E": 0,
+          "F": 0,
+          "G": 0
+        }
+      }
+    ],
+    "status": "Active",
+    "family": [
+      "KR"
+    ],
+    "url": "https://patents.google.com/patent/KR102986921B1/ko",
+    "summary": "KR102986921B1(주식회사 센베라, 공보일 2026-07-08, Google Patents 표기 Active)은 스윙 기능을 갖는 의자에 관한 특허다. 청구항 1은 바닥에 놓이는 고정 프레임 중앙의 스윙 구동 모듈이 전자기력으로 가동봉을 전후 직선 왕복시키고, 좌우 스윙 기초 프레임에 전방·후방 링크로 힌지 결합된 대칭 링크 기구와 연결빔으로 이루어진 리클라이너 모듈을 구동빔과 가동 링크로 가동봉에 이어, 직선 왕복 운동을 리클라이너의 스윙 회동으로 바꾸는 구성을 담는다. 요약서는 이 구성으로 소음과 진동을 줄이고 자연스러운 요람감을 준다고 적는다.",
+    "reviewed": "2026-11-26"
+  },
+  {
     "id": "2026-11-24-adl_assist",
     "stream": "ADL_ASSIST",
     "patent": "KR102972846B1",
